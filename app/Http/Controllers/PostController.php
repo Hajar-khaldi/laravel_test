@@ -11,6 +11,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __invoke($id){
+        return "id => ".$id;
+    }
+    
     public function index()
     {
         return "Hello javaTpoint";

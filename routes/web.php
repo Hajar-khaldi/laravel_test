@@ -145,3 +145,4 @@ Route::get('/exemple',function() {
 // });  
 // Route::get("/post","PostController@create");
 Route::get('/post/{id}', [PostController::class,"create"]);
+// Route::get('/post/{id}', PostController::class);
