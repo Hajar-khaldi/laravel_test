@@ -144,10 +144,10 @@ Route::get('/exemple',function() {
 // })->name('users');  
 // });  
 // Route::get("/post","PostController@create");
-Route::get('/post/{id}', [PostController::class,"create"]);
+Route::get('/post/{id}', [StudentController::class,"create"]);
 // Route::get('/post/{id}', PostController::class);
-Route::resource('posts',StudentController::class);
-// Route::resource('/exemple',ExempleController::class);
+// Route::resource('posts',StudentController::class);
+Route::resource('/hk',StudentController::class);
 
 // Route::resources([
 //   'post' => PostController::class,
