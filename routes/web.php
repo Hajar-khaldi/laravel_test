@@ -146,3 +146,9 @@ Route::get('/exemple',function() {
 // Route::get("/post","PostController@create");
 Route::get('/post/{id}', [PostController::class,"create"]);
 // Route::get('/post/{id}', PostController::class);
+Route::resource('posts',PostController::class);
+
+Route::resources([
+  'post' => PostController::class,
+  'student' => StudentController::class,
+]);

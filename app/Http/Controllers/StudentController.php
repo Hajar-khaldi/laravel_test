@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class StudentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,9 @@ class PostController extends Controller
     public function __invoke($id){
         return "id => ".$id;
     }
-    
     public function index()
     {
-        return "Hello javaTpoint";
+        //
     }
 
     /**
@@ -27,7 +26,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return "This is the create method";
+        //
     }
 
     /**
@@ -49,7 +48,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        return "show method is called and ID is : ". $id;
+        //
     }
 
     /**
