@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\StudentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -147,9 +148,19 @@ Route::get('/exemple',function() {
 Route::get('/post/{id}', [StudentController::class,"create"]);
 // Route::get('/post/{id}', PostController::class);
 // Route::resource('posts',StudentController::class);
-Route::resource('/hk',StudentController::class);
+Route::resources([
+  'post' => PostController::class,
+  'student' => StudentController::class,
+]);
+// Route::resource('students',StudentController::class,['only'=>['create','show']]);
+Route::resource('students',StudentController::class)->only(['create','show','edit']);
+// Route::resource('student', 'StudentController',['names' => ['create' =>'student.build']]);  
+Route::resource('students2',StudentController::class)->names(['edit'=>'student.build']);
+Route::resource('post2',PostController::class)
+->only(['show','edit'])
+->names(['edit'=>'student.build'])
+->parameters(['post2'=>'para']);
 
-// Route::resources([
-//   'post' => PostController::class,
-//   'student' => StudentController::class,
-// ]);
+// Route::get('posts',[PostController::class,'create'])->middleware('check');
+Route::get('posts/{id}',[PostController::class,'show']);
+// Route::get('posts',PostController::class);

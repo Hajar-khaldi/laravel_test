@@ -23,7 +23,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return "create new student";
     }
 
     /**
@@ -45,7 +45,7 @@ class StudentController extends Controller
      */
     public function show($id)
     {
-        //
+        return "show student";
     }
 
     /**
@@ -54,9 +54,9 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($users)
     {
-        //
+        return "edit student";
     }
 
     /**

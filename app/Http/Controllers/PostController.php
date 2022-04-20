@@ -11,9 +11,22 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __invoke($id){
-        return "id => ".$id;
+
+    public function __construct()
+    {   
+        //  $this->middleware(function ($request, $next) {  
+        //      return $next($request);  
+        //  });  
+        // $this->middleware('auth');
+        $this->middleware('check')->only('show');
+        // $this->middleware('subscribed')->except('store');
+        // return "hajar";
     }
+ 
+
+    // public function __invoke($id){
+    //     return "id => ".$id;
+    // }
     
     public function index()
     {
