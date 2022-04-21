@@ -66,6 +66,15 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function display($name)  
+    {  
+        return view('student?',compact("name"));
+        // return view('student')->with('id',$id);
+        // return view('student',['name1'=> 'Anisha','name2'=>'Nishka','name3'=>'Sumit']);  
+    }   
+
+     
     public function update(Request $request, $id)
     {
         //

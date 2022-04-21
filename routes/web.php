@@ -164,3 +164,15 @@ Route::resource('post2',PostController::class)
 // Route::get('posts',[PostController::class,'create'])->middleware('check');
 Route::get('posts/{id}',[PostController::class,'show']);
 // Route::get('posts',PostController::class);
+
+Route::get('/contact',function(){
+  return view('Contact',['name'=>'john']);
+});
+
+// Route::get('/about',[PostController::class,'display']);
+
+// Route::get('/details',[StudentController::class,'display']);
+
+// Route::get('/details/{id}',[StudentController::class,'display']);
+
+Route::get('/details/{name}',[StudentController::class,'display']);

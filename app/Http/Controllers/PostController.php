@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use View;
 
 class PostController extends Controller
 {
@@ -11,6 +12,16 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function display(){
+        if (View::exists('admin.details')) {  
+            echo "the view of the admin.details exists";        
+        }else  echo "view does not exist";  
+     }
+
+    //  public function display(){
+    //     return view('about');
+    //  }
 
     public function __construct()
     {   
