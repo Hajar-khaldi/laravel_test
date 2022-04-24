@@ -67,9 +67,11 @@ class StudentController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function display($name)  
-    {  
-        return view('student?',compact("name"));
+    // public function display($id,$name,$password)  
+    public function display($i)  
+    {   return view('student');
+        // return view('student',['students'=>array('Hajar','Samiya','Reda')]);
+        // return view('student',compact("id"));
         // return view('student')->with('id',$id);
         // return view('student',['name1'=> 'Anisha','name2'=>'Nishka','name3'=>'Sumit']);  
     }   
